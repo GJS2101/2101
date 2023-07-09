@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>江湖人物志</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+          border: 1px solid black;
+        } */
+      .yinYing {
+        box-shadow: rgb(0, 0, 0, 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 /12%) 0px 1px 3px 0px;
+      }
+
+      .flex {
+        display: flex;
+      }
+      /* 白背景 */
+      .baiSe {
+        background-color: #fff;
+      }
+      /* 占满比例*/
+      .flex1 {
+        flex: 1;
+      }
+      /* 竖向*/
+      .column {
+        flex-direction: column;
+      }
+      /* 上下左右外边距 */
+      .mg8 {
+        margin: 8px;
+      }
+      /* 右边距 */
+      .mgr8 {
+        margin-right: 8px;
+      }
+      /* 上边距 */
+      .mgt8 {
+        margin-top: 25px;
+      }
+      /* 四个小盒子 */
+      .shuJu {
+        height: 100px;
+      }
+      /* 中间的大盒子 */
+      .lieBiaoXiang {
+        height: 160px;
+      }
+      /* 导航条 */
+      .daoHang {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(201, 201, 210);
+        font-size: 14px;
+        color: #666;
+      }
+      .neiRong::-webkit-scrollbar {
+        display: none;
+        /* Chrome Safari */
+      }
+      /* 当屏幕宽度小于600px时要改变的css */
+      @media (max-width: 600px) {
+        /* 小屏幕上取消侧边栏，后面学js时会教怎么呼出 */
+        .ceBian {
+          display: none;
+        }
+        /* 内容栏和数据栏flex方向改为竖向 */
+        .neiRong {
+          flex-direction: column;
+        }
+        .shuJuQu {
+          flex-direction: column;
+        }
+        /* 右边加左外边距 */
+        .youQu {
+          margin-left: 8px;
+        }
+        .shuJu {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div
+      style="width: 200px; z-index: 3"
+      class="ceBian flex column baise yinYing"
+    >
+      <!-- 头像栏 -->
+      <div
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid #999;
+        "
+        class="flex"
+      >
+        <img src="C:\Users\HASEE\Desktop\GJS.jpg" width="40" height="40" />
+        <div style="margin-left: 10px">GJS</div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <div class="daoHang">陆地神仙</div>
+        <div class="daoHang">天象高手</div>
+        <div class="daoHang">指玄高手</div>
+        <div class="daoHang">金刚高手</div>
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex flex1 column">
+      <!-- 头部栏 -->
+      <div style="height: 60px; z-index: 2" class="baiSe yinYing"></div>
+      <!-- 内容区 -->
+      <div class="neiRong flex1 flex" style="overflow: auto">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex shuJuQu">
+            <!-- 四个小块显示重点数据 -->
+            <div class="shuJu flex1 baiSe mgr8 yinYing">北凉版图</div>
+            <div class="shuJu flex1 baiSe mgr8 yinYing">北莽版图</div>
+            <div class="shuJu flex1 baiSe mgr8 yinYing">离阳版图图</div>
+            <div class="shuJu flex1 baiSe yinYing">西楚版图</div>
+          </div>
+          <!-- 列表区 ，列表数据可以无限增加 -->
+          <div class="flex column">
+            <!-- 列表项 -->
+            <div class="lieBiaoXiang baiSe mgt8 yinYing">
+              西蜀老黄--- 天下名剑有十，他独占其六。
+              剑一：一剑开尘走龙蛇；剑二：两仪相生并蒂莲；剑三：剑上剑气重三斤；剑四：浮沉飘摇四朵花；剑五：风雪西天送观音；剑六:甲子六道锁轮回；剑七：七剑挑尽天上星；剑八：临终一区八仙跪；剑九：劣马黄酒六千里。
+            </div>
+            <div class="lieBiaoXiang baiSe mgt8 yinYing">
+              洛阳---前世为大秦皇后，现北莽魔道战力第一人，两次孤身杀穿北莽，一人站在北莽皇宫前独孤求败，北莽万骑难逆其锋，与桃花剑神邓太阿大战于敦煌成，两战天下武评第二北莽拖把菩萨，成为魔道逐鹿山之主，胜陆地神仙境界原北莽战力第一人刘松涛；帮助徐凤年击杀送念卿后，又击败离阳天象高手刘蒿师，大战之后受重创，排天下武评第四。拒北城一人独站西城墙，风采无双。前世为大秦皇后，那时他还不是一统天下的秦王，洛阳也不是那个孤傲的洛阳，
+              人便是洛阳。
+            </div>
+            <div class="lieBiaoXiang baiSe mgt8 yinYing">
+              红薯---原名红麝，梧桐苑大丫鬟，敦煌城主，生的体态丰满，肌肤白皙庾美，先天带有体香举止娴雅，不刻意争宠，反而最为得宠。出场就让人联想到《红楼梦》里的薛宝钗，都是带有体香，身材丰腴，端庄大气，
+              和所有人关系都很好。《红楼梦》这样描写宝钗“只见脸若银盆，眼似水杏，唇不点而红，眉不画而翠”放一起看，毫无违和感。
+            </div>
+            <div class="lieBiaoXiang baiSe mgt8 yinYing">
+              曹长卿---自称曹青衣，幼年身体孱弱，棋艺高超，以棋艺闻名京城传入皇帝耳中，被赐为棋待诏。后又帝师李密相中，得李密真传，才高八斗，冠绝天下，又因喜欢皇帝身边的皇后，接受管制从此陪在皇帝身边下棋，只为博她一笑。
+              西楚皇帝见识高，才华高，但曹长卿更高，一次对弈，西楚皇帝眼见要输，皇后放下怀中的猫扰乱了棋局，以曹长卿的能力虽能复原棋局，但这时他知道女子以不喜他，心灰意冷，向皇帝请辞，外出当城主，徐骁带兵攻打西楚，曹长卿一夜直接从手无缚鸡之力的文弱书生
+              变成冠绝江湖的大天象高手，曹长卿在前线守城，徐晓从后方已经杀进皇宫，皇帝自杀，皇后被赐死。曹长卿得到消息赶回皇宫，的适合只剩下一段白绫。怆然落泪：“春秋之中，风雨飘摇，有人抱头痛哭，有人檐下躲雨，有人借伞披蓑，唯我大楚不避雨，宁在雨中高歌死，不去寄人篱下活。你生死都在这样这样的大楚，我也在，这个天下，说是你害了大楚亡国，我曹长卿不答应!”从此曹长卿坚定了复国报仇的念头，先后三次入太安城杀皇帝，前两次正面冲杀，第三次暗杀离皇帝只剩下五十步，让大内指玄高手韩貂寺挡下。
+            </div>
+            <div class="lieBiaoXiang baiSe mgt8 yinYing">
+              张巨鹿---有人说：“书生意气之极有轩辕；书生风流之极有青衣，书生才能之极有黄龙；”那么张巨鹿就是：“书生胸襟之极有他，书生眼界之极有他，书生无私之极还有他。”张巨鹿，真正摒弃私怨，心怀天下，修身治国平天下的一代大儒（唯独没有齐家）
+              他为自己设下九死无生局，试问天下何人敢如此，天下何人愿如此？
+            </div>
+            <div class="lieBiaoXiang baiSe mgt8 yinYing">
+              温华---他从小就一直有个闯荡江湖的梦想，却只买得起一把木剑。温华希望有一天能被高人指点练就绝世武功，成为一为大侠木剑温华。江湖在他眼中就是美酒，兄弟，美人。不是尔虞我诈，千般算计，不是独孤求败无敌于世间，是温华仗剑走天涯，是温华与兄弟小年共饮酒。黄龙士满足了温华半个愿望，他让隋斜谷教了他两剑，可以
+              以一品高手之姿闯荡太安城，却不能让温华改变初衷。在梦想与兄弟之间，温华毫不犹豫选择了兄弟，当时他潇洒着说着：“在老子家乡那边，借人钱财，借你十两就得还十二三两，我温华的剑，是你教的，我废去全身武功，再还你一条手臂一条腿！”他在园中，就对那个黄老头说了这么一句。然后这个雪中血人在拐角处颓然蹲下，手边只剩下一柄带血木剑。年轻游侠儿泪眼模糊，凄然一笑，站起身，拿木剑对准墙壁，狠狠折断。从此再无江湖再无温华的消息，这名才出江湖便已名动天下的木剑游侠儿，一夜之间，以最决然的苍凉姿态，离开了江湖。刺骨大雪中，他最后对自己说了一句。“不练剑了。”一个是自己最好的兄弟，一个是自己的承诺，还有一丝传道恩情的恩师。两难选择，从此江湖再无温华！
+            </div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="youQu flex column mgr8 mgt8">
+          <!-- 提示区 -->
+          <div style="height: 150px" class="baiSe yinYing">
+            <iframe
+              frameborder="no"
+              border="0"
+              marginwidth="0"
+              marginheight="0"
+              width="185"
+              height="86"
+              src="http://music.163.com/outchain/player?type=2&id=2034254070&auto=1&height=66"
+            >
+            </iframe>
+          </div>
+          <!-- 消息区 -->
+          <div style="height: 300px" class="baiSe mgt8 yinYing">
+            <a> By GJS </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
