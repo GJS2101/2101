@@ -72,13 +72,13 @@
         let anNiu = document.getElementById("anNiu");
         let shuRuKuang = document.getElementById("shuRuKuang");
 
-        if （youShi）{
-            youShi = false;
-            anNiu.innerText = "√"；
-            shuRuKuang.style.borderBottomColor = "#fff";
-            shuRuKuang.value = "";
-            shuRuKuang.readOnly = false;
-            window.localStorage.removeItem("shi")
+        if (youShi) {
+          youShi = false;
+          anNiu.innerText = "√";
+          shuRuKuang.style.borderBottomColor = "#fff";
+          shuRuKuang.value = "";
+          shuRuKuang.readOnly = false;
+          window.localStorage.removeItem("shi");
         }
         else {
             youShi = true;
