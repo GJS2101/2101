@@ -79,20 +79,19 @@
           shuRuKuang.value = "";
           shuRuKuang.readOnly = false;
           window.localStorage.removeItem("shi");
-        }
-        else {
-            youShi = true;
-            anNiu.innerText = "×"；
-            shuRuKuang.style.borderBottomColor = "transparent";
-            shuRuKuang.readOnly = true;
-            window.localStorage.setItem("shi",shuRuKuang.value);
+        } else {
+          youShi = true;
+          anNiu.innerText = "×";
+          shuRuKuang.style.borderBottomColor = "transparent";
+          shuRuKuang.readOnly = true;
+          window.localStorage.setItem("shi", shuRuKuang.value);
         }
       }
-       let data = window.localStorage.getItem("shi");
-       if (data) {
-          document.getElementById("shuRuKuang").value = data;
-          change()
-       }
+      let data = window.localStorage.getItem("shi");
+      if (data) {
+        document.getElementById("shuRuKuang").value = data;
+        change();
+      }
     </script>
   </body>
 </html>
